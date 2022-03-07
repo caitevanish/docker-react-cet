@@ -1,0 +1,11 @@
+FROM node:lts-alpine
+# Currently using node v.16.13.2
+
+WORKDIR /app
+
+COPY package.json ./
+
+RUN npm install
+RUN npm install react-scripts@5.0.0 -g
+
+CMD ["npm", "start"]
